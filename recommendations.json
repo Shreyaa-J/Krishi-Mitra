@@ -1,0 +1,52 @@
+{
+  "rice": {
+    "season": "Kharif (June - November)",
+    "fertilizer": "Urea, DAP, Potash",
+    "irrigation": "Flood irrigation, regular watering"
+  },
+  "wheat": {
+    "season": "Rabi (October - March)",
+    "fertilizer": "NPK, Compost",
+    "irrigation": "Sprinkler or furrow irrigation"
+  },
+  "maize": {
+    "season": "Kharif (June - October)",
+    "fertilizer": "Urea, SSP, MOP",
+    "irrigation": "Drip or furrow irrigation"
+  },
+  "cotton": {
+    "season": "Kharif (April - September)",
+    "fertilizer": "Nitrogen, Potash, Phosphate",
+    "irrigation": "Drip irrigation, alternate furrow"
+  },
+  "sugarcane": {
+    "season": "Spring (February - March) or Autumn (September - October)",
+    "fertilizer": "Urea, Potash, DAP",
+    "irrigation": "Frequent, especially during growth"
+  },
+  "barley": {
+    "season": "Rabi (October - March)",
+    "fertilizer": "NPK, Organic manure",
+    "irrigation": "3-4 times, depending on rainfall"
+  },
+  "millet": {
+    "season": "Kharif (June - October)",
+    "fertilizer": "FYM, Nitrogen, Potassium",
+    "irrigation": "Minimal, drought-tolerant"
+  },
+  "banana": {
+    "season": "Year-round in tropical zones",
+    "fertilizer": "Nitrogen, Potassium, Compost",
+    "irrigation": "Weekly, with good drainage"
+  },
+  "mango": {
+    "season": "Kharif (June - August)",
+    "fertilizer": "FYM, Urea, Superphosphate",
+    "irrigation": "Once every 2–3 weeks"
+  },
+  "grapes": {
+    "season": "Spring (February - April)",
+    "fertilizer": "NPK, Zinc, Organic compost",
+    "irrigation": "Drip irrigation preferred"
+  }
+}       

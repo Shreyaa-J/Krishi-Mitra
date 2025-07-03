@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fertilizer Recommendation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url('https://img.freepik.com/premium-photo/panoramic-farm-sunset-with-tractors-data_73899-37224.jpg?w=1060');
+            background-size: cover;
+            background-position: center;
+            backdrop-filter: brightness(0.7);
+            font-family: Arial, sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.75);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #00ffcc;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin: 6px 0;
+        }
+
+        .btn {
+            margin-top: 20px;
+            background-color: #00cc66;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .btn:hover {
+            background-color: #00994d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fertilizer Recommendation</h1>
+        <p><strong>Crop:</strong> {{ crop }}</p>
+        <p><strong>Soil Nutrients:</strong> N={{ N }}, P={{ P }}, K={{ K }}</p>
+
+        {% if recommendation != "No specific recommendation found." %}
+            <p><strong>General Advice:</strong> {{ recommendation.general_advice }}</p>
+            <p><strong>Based on Deficiencies:</strong></p>
+            <ul>
+                <li><strong>Low Nitrogen:</strong> {{ recommendation.deficiency_rules.low_nitrogen }}</li>
+                <li><strong>Low Phosphorus:</strong> {{ recommendation.deficiency_rules.low_phosphorus }}</li>
+                <li><strong>Low Potassium:</strong> {{ recommendation.deficiency_rules.low_potassium }}</li>
+            </ul>
+        {% else %}
+            <p><strong>Recommended Fertilizer:</strong> No specific recommendation found.</p>
+        {% endif %}
+
+        <a href="/" class="btn">Back to Home</a>
+    </div>
+</body>
+</html>
+
+

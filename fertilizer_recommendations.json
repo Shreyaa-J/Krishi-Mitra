@@ -1,0 +1,162 @@
+{
+  "rice": {
+    "deficiency_rules": {
+      "low_nitrogen": "Apply Urea or Ammonium Sulfate",
+      "low_phosphorus": "Use Single Super Phosphate (SSP)",
+      "low_potassium": "Add Muriate of Potash (MOP)"
+    },
+    "general_advice": "Ensure balanced NPK based on soil test. Maintain proper pH and moisture."
+  },
+  "maize": {
+    "deficiency_rules": {
+      "low_nitrogen": "Apply Urea or Ammonium Sulfate",
+      "low_phosphorus": "Use Single Super Phosphate (SSP)",
+      "low_potassium": "Add Muriate of Potash (MOP)"
+    },
+    "general_advice": "Ensure balanced NPK based on soil test. Maintain proper pH and moisture."
+  },
+  "chickpea": {
+    "deficiency_rules": {
+      "low_nitrogen": "Apply Urea or Ammonium Sulfate",
+      "low_phosphorus": "Use Single Super Phosphate (SSP)",
+      "low_potassium": "Add Muriate of Potash (MOP)"
+    },
+    "general_advice": "Ensure balanced NPK based on soil test. Maintain proper pH and moisture."
+  },
+  "kidneybeans": {
+    "deficiency_rules": {
+      "low_nitrogen": "Apply Urea or Ammonium Sulfate",
+      "low_phosphorus": "Use Single Super Phosphate (SSP)",
+      "low_potassium": "Add Muriate of Potash (MOP)"
+    },
+    "general_advice": "Ensure balanced NPK based on soil test. Maintain proper pH and moisture."
+  },
+  "pigeonpeas": {
+    "deficiency_rules": {
+      "low_nitrogen": "Apply Urea or Ammonium Sulfate",
+      "low_phosphorus": "Use Single Super Phosphate (SSP)",
+      "low_potassium": "Add Muriate of Potash (MOP)"
+    },
+    "general_advice": "Ensure balanced NPK based on soil test. Maintain proper pH and moisture."
+  },
+  "mothbeans": {
+    "deficiency_rules": {
+      "low_nitrogen": "Apply Urea or Ammonium Sulfate",
+      "low_phosphorus": "Use Single Super Phosphate (SSP)",
+      "low_potassium": "Add Muriate of Potash (MOP)"
+    },
+    "general_advice": "Ensure balanced NPK based on soil test. Maintain proper pH and moisture."
+  },
+  "mungbean": {
+    "deficiency_rules": {
+      "low_nitrogen": "Apply Urea or Ammonium Sulfate",
+      "low_phosphorus": "Use Single Super Phosphate (SSP)",
+      "low_potassium": "Add Muriate of Potash (MOP)"
+    },
+    "general_advice": "Ensure balanced NPK based on soil test. Maintain proper pH and moisture."
+  },
+  "blackgram": {
+    "deficiency_rules": {
+      "low_nitrogen": "Apply Urea or Ammonium Sulfate",
+      "low_phosphorus": "Use Single Super Phosphate (SSP)",
+      "low_potassium": "Add Muriate of Potash (MOP)"
+    },
+    "general_advice": "Ensure balanced NPK based on soil test. Maintain proper pH and moisture."
+  },
+  "lentil": {
+    "deficiency_rules": {
+      "low_nitrogen": "Apply Urea or Ammonium Sulfate",
+      "low_phosphorus": "Use Single Super Phosphate (SSP)",
+      "low_potassium": "Add Muriate of Potash (MOP)"
+    },
+    "general_advice": "Ensure balanced NPK based on soil test. Maintain proper pH and moisture."
+  },
+  "pomegranate": {
+    "deficiency_rules": {
+      "low_nitrogen": "Apply Urea or Ammonium Sulfate",
+      "low_phosphorus": "Use Single Super Phosphate (SSP)",
+      "low_potassium": "Add Muriate of Potash (MOP)"
+    },
+    "general_advice": "Ensure balanced NPK based on soil test. Maintain proper pH and moisture."
+  },
+  "banana": {
+    "deficiency_rules": {
+      "low_nitrogen": "Apply Urea or Ammonium Sulfate",
+      "low_phosphorus": "Use Single Super Phosphate (SSP)",
+      "low_potassium": "Add Muriate of Potash (MOP)"
+    },
+    "general_advice": "Ensure balanced NPK based on soil test. Maintain proper pH and moisture."
+  },
+  "mango": {
+    "deficiency_rules": {
+      "low_nitrogen": "Apply Urea or Ammonium Sulfate",
+      "low_phosphorus": "Use Single Super Phosphate (SSP)",
+      "low_potassium": "Add Muriate of Potash (MOP)"
+    },
+    "general_advice": "Ensure balanced NPK based on soil test. Maintain proper pH and moisture."
+  },
+  "grapes": {
+    "deficiency_rules": {
+      "low_nitrogen": "Apply Urea or Ammonium Sulfate",
+      "low_phosphorus": "Use Single Super Phosphate (SSP)",
+      "low_potassium": "Add Muriate of Potash (MOP)"
+    },
+    "general_advice": "Ensure balanced NPK based on soil test. Maintain proper pH and moisture."
+  },
+  "apple": {
+    "deficiency_rules": {
+      "low_nitrogen": "Apply Urea or Ammonium Sulfate",
+      "low_phosphorus": "Use Single Super Phosphate (SSP)",
+      "low_potassium": "Add Muriate of Potash (MOP)"
+    },
+    "general_advice": "Ensure balanced NPK based on soil test. Maintain proper pH and moisture."
+  },
+  "orange": {
+    "deficiency_rules": {
+      "low_nitrogen": "Apply Urea or Ammonium Sulfate",
+      "low_phosphorus": "Use Single Super Phosphate (SSP)",
+      "low_potassium": "Add Muriate of Potash (MOP)"
+    },
+    "general_advice": "Ensure balanced NPK based on soil test. Maintain proper pH and moisture."
+  },
+  "papaya": {
+    "deficiency_rules": {
+      "low_nitrogen": "Apply Urea or Ammonium Sulfate",
+      "low_phosphorus": "Use Single Super Phosphate (SSP)",
+      "low_potassium": "Add Muriate of Potash (MOP)"
+    },
+    "general_advice": "Ensure balanced NPK based on soil test. Maintain proper pH and moisture."
+  },
+  "coconut": {
+    "deficiency_rules": {
+      "low_nitrogen": "Apply Urea or Ammonium Sulfate",
+      "low_phosphorus": "Use Single Super Phosphate (SSP)",
+      "low_potassium": "Add Muriate of Potash (MOP)"
+    },
+    "general_advice": "Ensure balanced NPK based on soil test. Maintain proper pH and moisture."
+  },
+  "cotton": {
+    "deficiency_rules": {
+      "low_nitrogen": "Apply Urea or Ammonium Sulfate",
+      "low_phosphorus": "Use Single Super Phosphate (SSP)",
+      "low_potassium": "Add Muriate of Potash (MOP)"
+    },
+    "general_advice": "Ensure balanced NPK based on soil test. Maintain proper pH and moisture."
+  },
+  "jute": {
+    "deficiency_rules": {
+      "low_nitrogen": "Apply Urea or Ammonium Sulfate",
+      "low_phosphorus": "Use Single Super Phosphate (SSP)",
+      "low_potassium": "Add Muriate of Potash (MOP)"
+    },
+    "general_advice": "Ensure balanced NPK based on soil test. Maintain proper pH and moisture."
+  },
+  "coffee": {
+    "deficiency_rules": {
+      "low_nitrogen": "Apply Urea or Ammonium Sulfate",
+      "low_phosphorus": "Use Single Super Phosphate (SSP)",
+      "low_potassium": "Add Muriate of Potash (MOP)"
+    },
+    "general_advice": "Ensure balanced NPK based on soil test. Maintain proper pH and moisture."
+  }
+}

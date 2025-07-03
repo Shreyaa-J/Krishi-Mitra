@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Results</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://img.freepik.com/premium-photo/panoramic-farm-sunset-with-tractors-data_73899-37224.jpg?w=1060');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.93); /* Slight transparency */
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        h1 {
+            text-align: center;
+            color: green;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #e6f2ff;
+        }
+        .charts {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+        .chart-box {
+            width: 45%;
+            min-width: 300px;
+        }
+        .top-priority {
+            text-align: center;
+            font-weight: bold;
+            color: #005a87;
+            margin-top: 20px;
+        }
+        .btns {
+            text-align: center;
+            margin-top: 30px;
+        }
+        button, a {
+            margin: 10px;
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        button.download {
+            background-color: #d9534f;
+        }
+        button:hover, a:hover {
+            background-color: #0056b3;
+        }
+        button.download:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Results</h1>
+
+        <table>
+            <tr>
+                <th>Model</th>
+                <th>Accuracy</th>
+                <th>Prediction</th>
+            </tr>
+            {% for result in results %}
+            <tr>
+                <td>{{ result.model }}</td>
+                <td>{{ result.accuracy | round(2) }}</td>
+                <td>{{ result.prediction }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <p class="top-priority">
+            ✅ Most Accurate: <strong>{{ results[0].model }}</strong> |
+            Crop: <strong>{{ results[0].prediction }}</strong> |
+            Accuracy: <strong>{{ results[0].accuracy | round(2) }}</strong>
+        </p>
+
+        <!-- Graph Section -->
+        <div class="charts">
+            <div id="accuracyChart" class="chart-box"></div>
+            <div id="agreementChart" class="chart-box"></div>
+        </div>
+
+        <!-- PDF & Back -->
+        <div class="btns">
+            <form id="pdfForm" method="post" action="/download-report">
+                <input type="hidden" name="report_data" id="reportData">
+                <button type="submit" class="download">Download Report (PDF)</button>
+            </form>
+            <a href="/">Go Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        const predictions = {{ predictions | tojson }};
+        const results = {{ results | tojson }};
+        const inputs = {{ inputs | tojson }};
+
+        // Accuracy chart
+        const modelNames = results.map(r => r.model);
+        const accuracies = results.map(r => r.accuracy);
+
+        Plotly.newPlot('accuracyChart', [{
+            x: modelNames,
+            y: accuracies,
+            type: 'bar',
+            name: 'Accuracy',
+            marker: { color: 'rgba(0,123,255,0.7)' }
+        }], {
+            title: 'Accuracy Comparison',
+            xaxis: { tickangle: -30 },
+            yaxis: { title: 'Accuracy' }
+        }, { responsive: true });
+
+        // Prediction agreement chart
+        const cropCounts = {};
+        Object.values(predictions).forEach(crop => {
+            cropCounts[crop] = (cropCounts[crop] || 0) + 1;
+        });
+
+        Plotly.newPlot('agreementChart', [{
+            labels: Object.keys(cropCounts),
+            values: Object.values(cropCounts),
+            type: 'pie',
+            hole: 0.4,
+            marker: {
+                colors: ['#ff6384', '#36a2eb', '#ffcd56', '#4bc0c0', '#9966ff']
+            }
+        }], {
+            title: 'Prediction Agreement',
+            showlegend: true
+        }, { responsive: true });
+
+        // For PDF download
+        document.getElementById('pdfForm').addEventListener('submit', function () {
+            const reportData = {
+                inputs: inputs,
+                predictions: predictions,
+                results: results
+            };
+            document.getElementById('reportData').value = JSON.stringify(reportData);
+        });
+    </script>
+</body>
+</html>

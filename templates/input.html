@@ -1,0 +1,145 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Data</title>
+    <script>
+        function validateForm() {
+            const inputs = document.querySelectorAll("input");
+            for (const input of inputs) {
+                if (!input.value) {
+                    alert("Please fill all the fields.");
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; margin: 20px;">
+    <h1>Input Crop Parameters</h1>
+    <form action="/predict" method="post" onsubmit="return validateForm();">
+        <label>Nitrogen (0-100):</label><br>
+        <input type="number" name="N" min="0" max="100" required><br><br>
+        
+        <label>Phosphorous (0-100):</label><br>
+        <input type="number" name="P" min="0" max="100" required><br><br>
+        
+        <label>Potassium (0-100):</label><br>
+        <input type="number" name="K" min="0" max="100" required><br><br>
+        
+        <label>Temperature (°C):</label><br>
+        <input type="number" name="temperature" required><br><br>
+        
+        <label>Humidity (%):</label><br>
+        <input type="number" name="humidity" min="30" max="90" required><br><br>
+        
+        <label>pH (1-14):</label><br>
+        <input type="number" name="ph" step="0.1" min="1" max="14" required><br><br>
+        
+        <label>Rainfall (mm):</label><br>
+        <input type="number" name="rainfall" min="0" required><br><br>
+        
+        <button type="submit" style="background-color: green; color: white; padding: 10px 20px; border: none;">Predict Crop</button>
+    </form>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('https://img.freepik.com/premium-photo/panoramic-farm-sunset-with-tractors-data_73899-37224.jpg?w=1060');
+            background-size: cover;
+            background-position: center;
+            backdrop-filter: brightness(0.8);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input:focus {
+            outline: none;
+            border-color: #4caf50;
+        }
+        button {
+            width: 100%;
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Input Parameters of Crop</h1>
+        <form action="/predict" method="post">
+            <label for="N">Nitrogen:</label>
+            <input type="number" id="N" name="N" placeholder="Enter value between 0 to 150" required>
+            
+            <label for="P">Phosphorous:</label>
+            <input type="number" id="P" name="P" placeholder="Enter value between 0 to 100" required>
+            
+            <label for="K">Potassium:</label>
+            <input type="number" id="K" name="K" placeholder="Enter value between 0 to 80" required>
+            
+            <label for="temperature">Temperature(°C):</label>
+            <input type="number" id="temperature" name="temperature" placeholder="Enter temperature in °C" required>
+            
+            <label for="humidity">Humidity(%):</label>
+            <input type="number" id="humidity" name="humidity" placeholder="Enter value between 10 to 100" required>
+            
+            <label for="ph">pH:</label>
+            <input type="number" id="ph" name="ph" step="0.1" placeholder="Enter value between 1 to 14" required>
+            
+            <label for="rainfall">Rainfall(mm):</label>
+            <input type="number" id="rainfall" name="rainfall" placeholder="Enter rainfall in mm" required>
+            
+            <button type="submit">Predict Crop</button>
+        </form>
+    </div>
+</body>
+</html>
