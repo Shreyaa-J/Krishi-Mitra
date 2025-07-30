@@ -29,7 +29,7 @@
 ## How to Run
 
 ```bash
-git clone https://github.com/yourusername/krishi-mitra.git
+git clone https://github.com/Shreyaa-J/krishi-mitra.git
 cd krishi-mitra
 pip install -r requirements.txt
 python app.py
